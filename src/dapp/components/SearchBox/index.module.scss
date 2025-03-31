@@ -1,0 +1,71 @@
+/* index.module.css */
+@import '../../../root.css';
+
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    position: relative; 
+
+    .search {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .searchInput {
+            height: 32px;
+            background-color: var(--color-colorBar);
+            border: 1px solid var(--color-inputBorder);
+            border-radius: 5px 0 0 5px;
+            color: var(--color-gray2);
+            font-size: 15px;
+            font-weight: lighter;
+            padding: 5px;
+            flex-grow: 2;
+
+            &:focus {
+                border: 1px solid var(--color-activeBorder);
+                outline: none;
+            }
+        }
+
+        .searchButton {
+            height: 32px;
+            background-color: var(--color-inputBorder);
+            border: 1px solid var(--color-inputBorder);
+            border-radius: 0 5px 5px 0;
+            color: var(--color-white);
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color-activeBorder);
+            }
+        }
+    }
+
+    .resultsPopup {
+        position: absolute; // This is the key to making the popup appear below the search box
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-color6);
+        // border: 1px solid #ccc;
+        z-index: 1000;
+        width: 100%;
+        height: auto;
+        font-size: 15px;
+        color: var(--color-gray2);
+
+        .resultItem {
+            padding: 6px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color-color5);
+            }
+        }
+    }
+}

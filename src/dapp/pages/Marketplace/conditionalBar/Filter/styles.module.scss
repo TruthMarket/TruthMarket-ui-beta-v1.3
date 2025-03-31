@@ -1,0 +1,44 @@
+@import '../../../../../root.css';
+
+.rangeInput {
+    width: 400px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+    
+    p{
+        color: var(--color-white);
+        font-size: 16px;
+
+    }
+
+    .input {
+        width: 60px;
+        height: 30px;
+        padding: 5px;
+        border: 1px solid var(--color-inputBorder);
+        border-radius: 5px;
+        background-color: var(--color-input-background);
+        color: var(--color-white); 
+        margin-right: 5px;
+        margin-left: 5px;
+
+        &:focus {
+            border: 1px solid var(--color-activeBorder);
+            outline: none;
+        }
+    }
+
+    .button {
+        margin-left: 10px;
+    }
+    
+    .error {
+        margin-left: 10px;
+        color: var(--color-error);
+        font-size: 12px;
+        font-weight: lighter;
+    }
+}

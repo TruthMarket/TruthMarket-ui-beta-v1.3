@@ -1,0 +1,108 @@
+.proverb {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .content {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+
+        p {
+            font-family: var(--font-heading);
+            color: var(--color-gray1);
+            line-height: 1.6;
+            opacity: 0.9;
+            
+            &.first {
+                font-size: 24px;
+                font-weight: var(--font-medium);
+                color: var(--color-white);
+            }
+
+            &.second {
+                font-size: 18px;
+                font-weight: var(--font-light);
+                font-style: italic;
+            }
+        }
+    }
+}
+
+// 平板设备
+@media (max-width: 768px) {
+    .proverb {
+        padding: 40px 16px;
+
+        .content {
+            max-width: 600px;
+            gap: 20px;
+
+            p {
+                &.first {
+                    font-size: 20px;
+                }
+
+                &.second {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+// 移动设备
+@media (max-width: 480px) {
+    .proverb {
+        padding: 30px 12px;
+
+        .content {
+            max-width: 100%;
+            gap: 16px;
+
+            p {
+                &.first {
+                    font-size: 18px;
+                }
+
+                &.second {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// 大屏设备
+@media (min-width: 1440px) {
+    .proverb {
+        padding: 80px 20px;
+
+        .content {
+            max-width: 1000px;
+            gap: 40px;
+
+            p {
+                &.first {
+                    font-size: 32px;
+                }
+
+                &.second {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+.left {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    position: fixed;
+    transition: top 0.3s ease;
+
+    .leftContent {
+        background-color: var(--color-color5);
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.3s ease;
+        max-height: calc(100vh - 100px);
+        overflow-y: visible;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+
+        &.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            background-color: inherit;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: var(--color-color5);
+                z-index: -1;
+            }
+
+            .tab {
+                padding: 10px;
+                cursor: pointer;
+                text-align: center;
+                border-bottom: 1px solid var(--color-active);
+                color: var(--color-gray1);
+                font-size: 12px;
+                position: relative;
+                background-color: inherit;
+
+                &.lastTab {
+                    border-bottom: none; 
+                }
+
+                &:hover {
+                    background-color: var(--color-color4);
+                }
+                
+                &.active {
+                    background: var(--color-tab-active);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .verticalLine {
+            margin-left: 20px;
+            width: 1px;
+            height: 100%;
+            background-color: var(--color-active);
+        }
+    }
+
+    .outlined {
+        width: 20px;
+        height: 25px;
+        border-radius: 0 4px 4px 0;
+        background-color: var(--color-color6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--color-color4);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .left {
+        width: auto;
+        z-index: 1;
+        position: static;
+
+        .leftContent {
+            background-color: transparent;
+            transform: none;
+            opacity: 1;
+            transition: none;
+            display: flex;
+            flex-direction: row;
+            max-height: none;
+            box-shadow: none;
+
+            .tabs {
+                &::before {
+                    display: none;
+                }
+            }
+
+            &.visible {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (min-width: 1330px) {
+    .left {
+        .leftContent {
+            .tabs {
+                width: 200px;
+
+                .tab {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

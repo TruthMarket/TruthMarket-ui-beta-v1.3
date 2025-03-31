@@ -1,0 +1,78 @@
+:root {
+    /* 字体系统 */
+    --font-heading: 'Heebo', sans-serif;    /* 用于标题 */
+    --font-body: 'Nunito Sans', sans-serif; /* 用于正文 */
+    --font-tips: 'Source Sans 3', sans-serif;
+    --font-button: 'Source Sans 3', sans-serif;
+    --font-input: 'Source Sans 3', sans-serif;
+
+    /* 字重定义 */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* ------------------------------- */
+    --color-background: #010918;
+    --color-background2: #12121f;
+    --color-input-background: #191927;
+    --color-colorBar: #1b1b2e;
+    --color-color4: #272a3d;
+    --color-color5: #222438;
+    --color-color6: #2d3043;
+    --color-color7: #393d4e;
+    --color-color8: #313131;
+    --color-activeBorder: #4912c7;
+    --color-active: #532ce2;
+    --color-disabled: #373c5a;
+
+    --color-boxShadow: rgba(0, 0, 0, 0.5);
+
+    --color-old: #382d70;
+    
+    --color-divBorder: #3e6964;
+    --color-inputBorder: #625d6e;
+
+    --color-error: rgb(216, 147, 20);
+    --color-attention: rgb(233, 62, 10);
+    --color-tips: #7650ff;
+
+    --color-line: #424242;
+    --color-pBorder: #363636;
+
+    --color-gray1: #dfdfdf;
+    --color-gray2: #b3b3b3;
+    --color-gray3: #919191;
+    
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-tab-active: linear-gradient(30deg, #532ce2, #5720da); 
+    
+    --color-button-color: linear-gradient(30deg, #0dddec, #0670e9); 
+    --color-button-hover: linear-gradient(30deg, #0c77f1, #750deb);
+    --color-button-color2: linear-gradient(30deg, #0dddec, #0670e9); 
+    --color-button-hover2: linear-gradient(30deg, #0c77f1, #750deb);
+
+    /* ------------------------ */
+    --color-Storing:#07d463;
+    --color-OnSale:#a5c205;
+    --color-Delivering:#e27419;
+    --color-Refunding:#d31737;
+    --color-Completed:#8c1be9;
+    --color-Published:#2476f1;
+
+}
+
+/* 全局基础字体设置 */
+body, p {
+    font-family: var(--font-body);
+    font-weight: var(--font-regular);
+    color: var(--color-gray2);
+}
+
+/* 标题默认字体 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}

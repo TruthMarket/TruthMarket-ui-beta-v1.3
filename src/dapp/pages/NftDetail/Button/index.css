@@ -1,0 +1,112 @@
+/* From Uiverse.io by cssbuttons-io */
+/*
+.buttonDetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttonDetail:active,
+.buttonDetail:hover {
+    outline: 0;
+}
+
+.buttonDetail .buttonSpan {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.buttonDetail:hover .buttonSpan {
+    background: none;
+}
+
+.buttonDetail:active {
+    transform: scale(0.9);
+}
+*/
+
+/* From Uiverse.io by nikk7007 */
+.buttonOne {
+    border: 2px solid #7a55ff;
+    color: #7a55ff;
+}
+
+.buttonOne::before {
+    background: #7a55ff;
+}
+
+.buttonTwo {
+    border: 2px solid #157bcf;
+    color: #157bcf;
+}
+
+.buttonTwo::before {
+    background: #157bcf;
+}
+
+.buttonDis {
+    border: 2px solid #4b5464;
+    color: #4b5464;
+}
+
+.buttonDis::before {
+    background: #4b5464;
+}
+
+.buttonOne::before, .buttonTwo::before , .buttonDis::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.buttonOne, .buttonTwo, .buttonDis {
+    width: 140px;
+    padding: 0.6em 0em;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+
+}
+
+.buttonOne:hover::before, .buttonTwo:hover::before {
+    width: 105%;
+}
+
+.buttonOne:hover, .buttonTwo:hover {
+    color: #111;
+}

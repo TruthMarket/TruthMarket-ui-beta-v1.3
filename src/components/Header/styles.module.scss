@@ -1,0 +1,192 @@
+@import '../../root.css';
+
+.article {
+    background-color: var(--color-background);
+    width: 100%; 
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+
+    .nav {
+        width: 95%;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+
+        .logo {
+            display: flex;
+            flex-direction: row; 
+            align-items: center; 
+
+            img {
+                width: 30px; 
+                height: 30px; 
+                filter: brightness(1.1);
+            }
+
+            .logoText {
+                display: flex;
+                flex-direction: row; 
+                align-items: last baseline; 
+                font-size: 15px; 
+                color: var(--color-white);
+
+                .title01 {
+                    color: var(--color-white);
+                    margin-left: 10px;
+                    font-weight: lighter; 
+                }
+    
+                .title02 {
+                    color: var(--color-white);
+                    margin-left: 1px;
+                    font-weight: bold; 
+                }
+            }
+        }
+
+        .menuButton {
+            display: none; // 默认隐藏菜单按钮
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+
+            .link {
+                font-weight: lighter; 
+                font-size: 12px; 
+                margin: 0 10px; 
+                padding: 3px 10px; 
+                border-radius: 15px; 
+                text-decoration: none; 
+                color: var(--color-white);
+                text-align: center;
+
+                &:hover {
+                    background-color: var(--color-color6);
+                }
+
+                &.now {
+                    background: var(--color-button-hover);
+                    font-weight: bold; 
+                }
+            }
+        }
+
+        .button {
+            font-size: 13px;
+            padding: 5px 8px; 
+            border-radius: 5px;
+            color: var(--color-white);
+            background-color: var(--color-activeBorder);
+            border: none; 
+
+            .buttonTextMobile {
+                display: none;
+            }
+
+            &:hover {
+                background-color: var(--color-active);
+            }
+        }
+
+        // 移动端样式
+        @media (max-width: 425px) {
+            .logo {
+                .logoText {
+                    display: none;
+                }
+            }
+            .menuButton {
+                display: block;
+                order: 2;
+            }
+            .button {
+                order: 3;
+                
+                .buttonText {
+                    display: none;
+                }
+
+                .buttonTextMobile {
+                    display: inline;
+                }
+            }
+        }
+
+        // 移动端样式
+        @media (max-width: 768px) {
+
+            .menuButton {
+                display: block;
+                order: 2;
+            }
+
+            .links {
+                display: none;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: var(--color-background);
+                padding: 10px 0;
+                z-index: 1000;
+
+                &.open {
+                    display: flex;
+                }
+
+                .link {
+                    margin: 5px 0;
+                    padding: 8px 20px;
+                    border-radius: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .button {
+                order: 3;
+            }
+            
+        }
+
+        // 桌面端样式保持不变
+        @media (min-width: 1440px) {
+            width: 1400px;
+
+            .logo {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                .logoText {
+                    color: var(--color-white);
+                    font-size: 23px;
+                }
+            }
+
+            .links {
+                .link {
+                    font-size: 15px;
+                    border-radius: 20px;
+                }
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 7px 8px;
+                border-radius: 7px;
+            }
+        }
+    }
+}

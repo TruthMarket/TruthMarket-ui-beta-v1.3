@@ -1,0 +1,27 @@
+@import "../../root.css";
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-background);
+
+    .loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            margin-top: 10px;
+            font-weight: regular;
+            color: var(--color-active);
+        }
+
+
+    }
+}

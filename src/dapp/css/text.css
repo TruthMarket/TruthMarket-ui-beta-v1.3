@@ -1,0 +1,23 @@
+@import "../../root.css";
+
+.pLength {
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    /* white-space: pre-wrap; */
+}
+
+.illustrate {
+    margin-top: 5px;
+    color: var(--color-gray2);
+    font-size: 15px;
+    font-weight: lighter;
+    
+}
+
+.example {
+    margin-left: 20px;
+    color: var(--color-gray2);
+    font-size: 15px;
+    font-weight: lighter;
+    
+}

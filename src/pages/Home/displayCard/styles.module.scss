@@ -1,0 +1,184 @@
+@import '@/root.css';
+
+.displayCard {
+    width: 95%;
+    margin-bottom: 50px;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+
+    &.visible {
+        opacity: 1;
+
+        .imgLeft {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .imgRight {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .imgLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: all 0.8s ease-out;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .spanLeft {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            h1 {
+                color: var(--color-white);
+                font-family: var(--font-heading);
+                font-weight: var(--font-medium);
+                font-size: 20px;
+                margin: 20px 0;
+            }
+
+            p {
+                margin-top: 10px;
+                color: var(--color-gray2);
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                font-family: var(--font-body);
+                font-weight: var(--font-regular);
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .imgRight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: all 0.8s ease-out;
+
+        img {
+            order: 1;
+            width: 100%;
+            height: auto;
+        }
+
+        .spanRight {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            h1 {
+                color: var(--color-white);
+                font-family: var(--font-heading);
+                font-size: 20px;
+                font-weight: var(--font-medium);
+                margin: 20px 0;
+            }
+
+            p {
+                margin-top: 10px;
+                color: var(--color-gray2);
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                font-family: var(--font-body);
+                font-weight: var(--font-regular);
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .displayCard {
+        .imgLeft {
+            flex-direction: row;
+            padding: 15px;
+
+            img {
+                width: 60%;
+            }
+
+            .spanLeft {
+                margin-left: 50px;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .imgRight {
+            flex-direction: row;
+            padding: 15px;
+
+            img {
+                order: 2;
+                width: 60%;
+            }
+
+            .spanRight {
+                order: 1;
+                margin-right: 50px;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .displayCard {
+        width: 1400px;
+
+        .imgLeft,
+        .imgRight {
+            padding: 40px;
+
+            img {
+                width: 800px;
+            }
+
+            .spanRight, .spanLeft {
+                h1 {
+                    font-size: 32px;
+                }
+
+                p {
+                    margin-top: 30px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        // .imgLeft, .spanLeft {
+        //     margin-left: 80px;
+        // }
+
+        // .imgRight, .spanRight {
+        //     margin-right: 80px;
+        // }
+    }
+}

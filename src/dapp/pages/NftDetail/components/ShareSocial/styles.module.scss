@@ -1,0 +1,90 @@
+.shareContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    
+    .shareTitle {
+        font-size: 16px;
+        color: var(--color-gray2);
+        margin-bottom: 8px;
+    }
+    
+    .shareButtons {
+        display: flex;
+        gap: 12px;
+        
+        .shareButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: var(--color-colorBar);
+            color: var(--color-gray2);
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
+            
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            &.twitter {
+                &:hover {
+                    background-color: #1DA1F2;
+                    color: white;
+                }
+            }
+            
+            &.facebook {
+                &:hover {
+                    background-color: #4267B2;
+                    color: white;
+                }
+            }
+            
+            &.telegram {
+                &:hover {
+                    background-color: #0088cc;
+                    color: white;
+                }
+            }
+            
+            &.discord {
+                &:hover {
+                    background-color: #5865F2;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+    .shareContainer {
+        padding: 12px;
+        
+        .shareButtons {
+            gap: 8px;
+            
+            .shareButton {
+                width: 36px;
+                height: 36px;
+                
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}

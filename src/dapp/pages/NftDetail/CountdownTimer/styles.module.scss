@@ -1,0 +1,47 @@
+@import "../../../../root.css";
+
+.secretTime {
+    margin-top: 50px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .showTime {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .time {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        
+            .timeNumber {
+                color: var(--color-white);
+                font-size: 30px;
+                font-weight: regular;
+                background-color: var(--color-background2);
+                border-radius: 10px;
+                padding: 20px;
+            }
+
+            p {
+                color: var(--color-gray2);
+                font-size: 15px;
+                font-weight: regular;
+                margin-right: 15px;
+                margin-left: 8px;
+            }
+        }
+        
+    }
+
+    .haveTime {
+        font-size: 20px;
+        font-weight: regular;
+    }
+}

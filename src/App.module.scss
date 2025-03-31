@@ -1,0 +1,13 @@
+@import './root.css';
+
+
+.app {
+  background: var(--color-background);
+  color: var(--color-white);
+
+  .container {
+    display: flex; 
+    justify-content: center; 
+  }
+
+}

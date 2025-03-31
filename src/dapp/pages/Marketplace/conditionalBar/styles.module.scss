@@ -1,0 +1,109 @@
+@import "../../../../root.css";
+
+
+.conditionalBar {
+    width: 100%;
+    height: 110px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-colorBar);
+
+    .searchBar {
+        margin-top: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .filterSelector {
+
+            display: flex;
+            flex-direction: row // justify-content: space-around;
+        }
+
+        .sort {
+            // width: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: right;
+
+            .selectSort {
+                padding: 7px 10px;
+                background-color: var(--color-color6);
+                color: var(--color-white);
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--color-color7);
+                }
+
+                option {
+                    background-color: var(--color-color6);
+
+                    z-index: 1000;
+                    font-size: 13px;
+                    color: var(--color-gray1);
+                }
+            }
+        }
+
+
+
+    }
+
+    .filterBar {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: row; // 水平排列
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        .filter {
+            width: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .select {
+                background-color: transparent;
+                color: var(--color-gray1);
+                font-weight: lighter;
+                font-size: 15px;
+                border: none;
+
+                cursor: pointer;
+
+                option {
+                    background-color: var(--color-color6);
+                    color: var(--color-gray1);
+                }
+            }
+
+        }
+
+        .filterResult {
+
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            align-items: center;
+            color: var(--color-gray1);
+            font-weight: lighter;
+            font-size: 15px;
+
+        }
+    }
+
+}

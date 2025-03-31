@@ -1,0 +1,43 @@
+@import '../../../root.css';
+
+.skeletonCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 0 20px var(--color-background2);
+    
+    .image {
+        width: 100%;
+        height: 270px;
+        background-color: var(--color-black);
+    }
+    
+    .content {
+        width: 100%;
+        background-color: var(--color-colorBar);
+        padding: 10px 15px;
+        
+        .infoOne {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        
+        .horizontalLine {
+            width: 320px;
+            height: 1px;
+            background-color: var(--color-line);
+            margin: 10px 0;
+        }
+        
+        .infoTwo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+    }
+}

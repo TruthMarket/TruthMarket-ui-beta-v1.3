@@ -1,0 +1,163 @@
+@import '../../../root.css';
+
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 350px;
+    height: 400px;
+    // 投影
+    box-shadow: 0 0 20px var(--color-background2);
+
+    &:hover {
+        // border: 2px solid var(--color-activeBorder);
+        outline: 2px solid var(--color-activeBorder);
+        outline-offset: 0; // 可以调整外边框的距离
+    }
+
+    .horizontalLine {
+        width: 320px;
+        height: 1px;
+        background-color: var(--color-line);
+        // margin: 0 20px; /* 根据需要调整间距 */
+    }
+
+    .image {
+        width: 100%;
+        height: 270px;
+        background-color: var(--color-black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; // 防止图片溢出
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; // 保持长宽比并适应容器
+            // 可选：添加过渡效果
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .content {
+        width: 100%;
+        background-color: var(--color-colorBar);
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        .title {
+            margin-top: 10px;
+            width: 90%;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 15px;
+            font-weight: regular;
+            color: var(--color-gray2);
+        }
+
+        .infoOne {
+            width: 90%;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+
+
+            color: var(--color-gray2);
+            font-size: 15px;
+            font-weight: regular;
+
+            .country {
+                display: flex;
+                flex-direction: row;
+
+                p {
+                    margin-right: 10px;
+                }
+            }
+
+            .time {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .infoTwo {
+            width: 90%;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 16px;
+
+            .id {
+                color: var(--color-white);
+
+            }
+
+            .statusPrice {
+                display: flex;
+                // 元素靠两边对齐
+                justify-content: space-between;
+                align-items:center;
+                
+
+                .status {
+                    font-size: 17px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items:flex-end;
+                    // vertical-align: bottom; 
+
+                    .price {
+                        color: var(--color-white);
+                        font-size: 17px;
+                    }
+    
+                    .tokenSymbol {
+                        margin-left: 5px;
+                        font-size: 15px;
+                        color: var(--color-gray2);
+                        
+                    }
+                }
+
+                // 根据状态不同显示不同颜色
+                .OnSale {
+                    color: var(--color-OnSale);
+                }
+
+                .Storing {
+                    color: var(--color-Storing);
+                }
+
+                .Refunding {
+                    color: var(--color-Refunding);
+                }
+
+                .Delivering {
+                    color: var(--color-Delivering);
+                }
+
+                .Completed {
+                    color: var(--color-Completed);
+                }
+
+                .Published {
+                    color: var(--color-Published);
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@import "../../../../root.css";
+
+.left {
+    width: 660px;
+    margin-top: 50px;
+
+    .idBar {
+        display: flex;
+        flex-direction: row;
+        justify-items: baseline;
+        align-items: baseline;
+
+        .idNumber {
+            color: var(--color-white);
+            font-size: 20px;
+            font-weight: regular;
+            margin-left: 10px;
+        }
+
+    }
+
+    .titleBar {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        word-wrap: break-word;
+        font-size: 18px;
+    }
+
+    .countryBar {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .country {
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p {
+                text-align: right;
+                margin-right: 10px;
+            }
+        }
+
+
+
+        .theTime {
+            font-weight: regular;
+        }
+
+    }
+
+    .introduceBar {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        word-wrap: break-word;
+
+    }
+
+    .imageBar {
+        margin-top: 30px;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 500px;
+        background-color: #000000;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            // object-fit: cover;
+        }
+    }
+
+    .ownerTime {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+
+
+
+        p {
+
+            margin-top: 10px;
+        }
+
+
+    }
+}

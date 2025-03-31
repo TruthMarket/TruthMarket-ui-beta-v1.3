@@ -1,0 +1,164 @@
+@import "../../../../../root.css";
+
+.stepWrapper {
+    width: 550px;
+    margin: 0 auto;
+    position: relative;
+    
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, var(--color-colorBar) 0%, transparent 100%);
+    }
+    
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, var(--color-colorBar) 0%, transparent 100%);
+    }
+}
+
+.stepContainer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    &::before,
+    &::after {
+        content: '';
+        min-width: 275px;
+        height: 1px;
+    }
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.stepItem {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.stepNode {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    
+    &.active_storing {
+        background-color: var(--color-Storing);
+        color: var(--color-white);
+        box-shadow: 0 2px 4px rgba(var(--color-Storing-rgb), 0.2);
+    }
+    
+    &.active_selling {
+        background-color: var(--color-OnSale);
+        color: var(--color-white);
+        box-shadow: 0 2px 4px rgba(var(--color-OnSale-rgb), 0.2);
+    }
+    
+    &.active_refunding {
+        background-color: var(--color-Refunding);
+        color: var(--color-white);
+        box-shadow: 0 2px 4px rgba(var(--color-Refunding-rgb), 0.2);
+    }
+    
+    &.active_delivering {
+        background-color: var(--color-Delivering);
+        color: var(--color-white);
+        box-shadow: 0 2px 4px rgba(var(--color-Delivering-rgb), 0.2);
+    }
+    
+    &.active_completed {
+        background-color: var(--color-Completed);
+        color: var(--color-white);
+        box-shadow: 0 2px 4px rgba(var(--color-Completed-rgb), 0.2);
+    }
+    
+    &.active_published {
+        background-color: var(--color-Published);
+        color: var(--color-white);
+        box-shadow: 0 2px 4px rgba(var(--color-Published-rgb), 0.2);
+    }
+
+    &.completed_storing,
+    &.completed_selling,
+    &.completed_refunding,
+    &.completed_delivering,
+    &.completed_completed,
+    &.completed_published {
+        background-color: var(--color-old);
+        color: var(--color-gray1);
+        opacity: 0.7;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 6px 12px;
+        border-radius: 16px;
+    }
+    
+    &.pending {
+        background-color: var(--color-disabled);
+        color: var(--color-gray2);
+        font-size: 12px;
+        font-weight: 300;
+        padding: 6px 12px;
+        border-radius: 16px;
+    }
+}
+
+.stepLine {
+    width: 60px;
+    height: 2px;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    
+    &.line_storing { background-color: var(--color-Storing); }
+    &.line_selling { background-color: var(--color-OnSale); }
+    &.line_refunding { background-color: var(--color-Refunding); }
+    &.line_delivering { background-color: var(--color-Delivering); }
+    &.line_completed { background-color: var(--color-Completed); }
+    &.line_published { background-color: var(--color-Published); }
+    
+    &.line_completed2 { background-color: var(--color-old); }
+    &.pending {
+        background-color: var(--color-disabled);
+    }
+}
+
+// 适配移动端
+@media (max-width: 768px) {
+    .stepWrapper {
+        width: 100%;
+    }
+
+    .stepContainer {
+        padding: 10px;
+    }
+
+    .stepNode {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .stepLine {
+        width: 30px;
+    }
+}

@@ -1,0 +1,174 @@
+@import "@/root.css";
+
+.home {
+    display: flex; // 
+    flex-direction: column; // 
+    align-items: center; // 
+    justify-content: center; // 
+    width: 100%; 
+    background: radial-gradient(circle at 10% 20%, rgba(13, 18, 82, 0.3), transparent 20%),
+                radial-gradient(circle at 100% 70%, rgba(81, 10, 161, 0.3), transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(40, 40, 187, 0.3), transparent 20%),
+                radial-gradient(circle at 0% 95%, rgba(59, 60, 94, 0.4), transparent 20%),
+                var(--color-background2);
+    color: var(--color-white);
+
+    .container{
+        width: 1300px; 
+        height:auto; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+
+        .first {
+            display: flex; 
+            
+            align-items: center; 
+            height: 200px; 
+
+            p {
+                color: var(--color-gray1); 
+                font-size: 20px; 
+            }
+
+        }
+
+        .second {
+            width: 100%; 
+            height: auto;
+            background-color: var(--color-colorBar); 
+            
+            display: flex; // 
+            flex-direction: column; // 
+            align-items: center;
+            position: relative; // 确保容器是相对定位
+            // z-index: 0; // 设置容器的层次关系
+        
+            .content{
+                // position: relative; // 确保容器是相对定位
+                // z-index: 2; // 设置容器的层次关系
+                display: flex; 
+                align-items: center; // 
+                flex-direction: column; // 
+                width: 1200px; 
+                height: auto; 
+                color: var(--color-gray1); 
+                
+                // 通用的表单行样式
+                .formBar {
+                    margin-top: 30px;
+                    display: flex; 
+                    flex-direction: row;
+                    width: 100%;
+                    
+                    // 通用的标签样式
+                    .formLabel {
+                        width: 90px;
+                        text-align: right;
+                        margin-right: 10px;
+                    }
+                }
+                
+                // 垂直居中的表单行
+                .formBarColumnCentered {
+                    @extend .formBar;
+                    align-items: center;
+                }
+                
+                .checkBar {
+                    margin-top: 50px;
+                    display: flex; 
+                    flex-direction: row;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                .typeBar {
+                    @extend .formBarColumnCentered;
+
+                    .inputType {
+                        width: 300px;
+                        height: 40px;
+                    }
+                }
+
+                .titleBar {
+                    @extend .formBarColumnCentered;
+                    margin-top: 60px;
+                    .inputTitle {
+                        height: 40px;
+                        flex-grow: 2;
+                    }
+                }
+
+                .countryBar {
+                    margin-top: 60px;
+                    @extend .formBarColumnCentered;
+                }
+
+                .dateBar {
+                    @extend .formBarColumnCentered;
+                }
+
+                .introduceBar {
+                    @extend .formBar;
+                    
+                }
+
+                .imageBar {
+                    @extend .formBar;
+                }
+
+                .priceBar {
+                    @extend .formBarColumnCentered;
+
+                    .inputPrice {
+                        width: 300px;
+                        height: 40px;
+                    }
+
+                    .tokenSymbol {
+                        text-align: left;
+                        margin-left: 10px;
+                        font-size: 15px;
+                        color: var(--color-gray1);
+                    }
+                }
+
+                .modeBar {
+                    @extend .formBarColumnCentered;
+                }
+
+                .fileBar {
+                    @extend .formBar;
+                }
+
+                .upload {
+                    margin-top: 30px;
+                }
+            }
+
+            .horizontalLine {
+                width: 1200px;
+                height: 1px;
+                margin-top: 50px;
+                background-color: var(--color-active);
+                // margin: 0 20px; 
+            }
+
+            .createButton {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                display: flex; 
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+
+        .third {
+            height: 150px;
+        }
+    }
+}

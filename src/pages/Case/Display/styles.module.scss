@@ -1,0 +1,43 @@
+@import '../../../root.css';
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonGroup {
+    margin-bottom: 20px;
+    // 
+    
+}
+
+.button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:first-child {
+        margin-right: 10px;
+    }
+
+    &.active {
+        background-color: var(--color-disabled);
+
+        &:hover {
+            background-color: var(--color-disabled);
+        }
+    }
+
+    &.inactive {
+        background-color: var(--color-active);
+
+        &:hover {
+            background-color: var(--color-active);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+/* index.css */
+.react-select__menu {
+    scrollbar-width: thin;
+    scrollbar-color: #b3b3b3 #2b2d47;
+}
+
+.react-select__menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.react-select__menu::-webkit-scrollbar-track {
+    background: #2b2d47;
+}
+
+.react-select__menu::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 10px;
+    border: 2px solid #2b2d47;
+}
+
+.react-select__menu::-webkit-scrollbar-thumb:hover {
+    background: #1e1f33;
+}

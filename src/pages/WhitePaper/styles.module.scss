@@ -1,0 +1,57 @@
+.whitepaper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background: radial-gradient(circle at 100px 200px, rgba(13, 18, 82, 0.3), transparent 20%),
+                radial-gradient(circle at 1900px 700px, rgba(91, 14, 180, 0.3), transparent 20%),
+                radial-gradient(circle at 1px 1100px, rgba(59, 60, 94, 0.3), transparent 20%),
+                radial-gradient(circle at 1600px 1400px, rgba(59, 60, 94, 0.3), transparent 20%),
+                var(--color-background);
+
+    .none {
+        width: 90%;
+        height: 50px;
+        margin-bottom: 20px;
+
+        .tips {
+            margin-top: 30px;
+            color: var(--color-gray2);
+            font-size: 14px;
+            text-align: center;
+            font-weight: lighter;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        width: 100%;
+        margin-bottom: 100px;
+
+        .contents {
+            padding: 20px;
+            flex-grow: 1; 
+        }
+    }
+
+    @media (min-width: 769px) {
+        .container {
+            margin-top: 50px;
+            justify-content: space-between;
+            width: 95%;
+        }
+    }
+
+    @media (min-width: 1330px) {
+        .container {
+            width: 1200px;
+
+            .contents {
+                padding: 20px 50px;
+            }
+        }
+    }
+}

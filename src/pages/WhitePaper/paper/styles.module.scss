@@ -1,0 +1,131 @@
+@import '../../../root.css';
+
+.navr {
+
+    .title {
+        font-size: 18px;
+        font-weight: regular;
+        margin-bottom: 10px;
+        color: var(--color-white);
+    }
+
+    h3 {
+        margin-top: 30px;
+        font-size: small;
+        color: var(--color-white);
+    }
+
+    
+    p {
+        font-size: 13px;
+        font-weight: regular;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: var(--color-gray1);
+        white-space: pre-wrap; 
+        word-wrap: break-word; 
+    }
+
+    .imageOne {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .imageTwo {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; 
+
+        // .imageTwo01 {
+        //     flex: 1; 
+        //     max-width: calc(100% / 2 - 15px); 
+        //     height: auto; 
+        // }
+    }
+
+    .imageThree {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; 
+
+        // img {
+        //     flex: 1; 
+        //     max-width: calc(100% / 3 - 15px); 
+        //     height: auto; 
+        // }
+    }
+
+    .titleMap {
+        color: var(--color-gray1);
+        font-size: larger;
+        font-weight: bolder;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        color: var(--color-gray2);
+        font-size: 15px;
+        margin-bottom: 15px;
+        font-weight: regular;
+    }
+
+    @media (min-width: 768px) {
+        .title {
+            font-size: 24px;
+        }
+        h3 {
+            margin-top: 30px;
+            font-size:medium;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (min-width: 1330px) {
+        .title {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .imageTwo {
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; 
+    
+            .imageTwo01 {
+                flex: 1; 
+                max-width: calc(100% / 2 - 15px); 
+                height: auto; 
+            }
+        }
+    }
+}

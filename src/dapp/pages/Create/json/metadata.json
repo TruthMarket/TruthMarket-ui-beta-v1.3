@@ -1,0 +1,41 @@
+
+
+{
+    "name": "Truth Box & NFT",
+    "image": "ipfs://",
+    "description":"Truth Market",
+    "website":"https://truthmarket.eth.limo/",
+    "boxInfo":{
+        "typeOfCrime":"",
+        "title": "",
+        "country": "",
+        "state": "",
+        "eventDate": "",
+        "description": "",
+        "createDate": "",
+        "minter": "",
+        "imageIPFS": "",
+        "timestamp": ""
+    },
+    "radio":"",
+    "KeyPair_office":{
+        "publicKey_office": "0x3059301306072a8648ce3d020106082a8648ce3d0301070342000411f3c5238ed10f09b1ea2c24268ec9461fd72b8f042b57f5f498d27c4c66ca9b15f40b44f42c325d4894e6372895083902db7aa5faf416403d24517fb5cce2e3",
+        "office_index": 0
+    },
+    "KeyPair_minter":{
+        "publicKey_minter": "",
+        "privateKey_minter": ""
+    },
+    "encryptionData":{
+        "fileCID": "",
+        "fileCID_iv": "",
+        "password": "",
+        "password_iv": ""
+    },
+    "attributes": [
+        {
+            "trait_type": "CurrentVersion",
+            "value": "beta 1.3"
+        }
+    ]
+}

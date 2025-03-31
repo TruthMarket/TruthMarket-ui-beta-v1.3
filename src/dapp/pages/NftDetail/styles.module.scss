@@ -1,0 +1,298 @@
+@import "../../../root.css";
+
+.home {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    background: radial-gradient(circle at 10% 20%, rgba(13, 18, 82, 0.3), transparent 20%),
+        radial-gradient(circle at 100% 70%, rgba(81, 10, 161, 0.3), transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(40, 40, 187, 0.3), transparent 20%),
+        radial-gradient(circle at 0% 95%, rgba(59, 60, 94, 0.4), transparent 20%),
+        #131321;
+    color: var(--color-white);
+
+    .container {
+        width: 1400px; 
+        height: auto; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+
+        .first {
+            display: flex; 
+
+            align-items: center; 
+            height: 200px; 
+
+            p {
+                color: var(--color-gray2);
+                font-size: 20px; 
+                // font-weight: lighter; // ���体粗细
+            }
+
+        }
+
+        .second {
+            width: 100%; 
+            height: auto;
+            background-color: var(--color-colorBar);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                width: 1300px;
+                height: auto;
+                color: var(--color-gray2);
+
+                .left {
+                    width: 660px;
+                    margin-top: 50px;
+
+                    .idBar {
+                        display: flex;
+                        flex-direction: row;
+                        justify-items: baseline;
+                        align-items: baseline;
+
+                        .idNumber {
+                            color: var(--color-white);
+                            font-size: 20px;
+                            font-weight: regular;
+                            margin-left: 10px;
+                        }
+
+                    }
+
+                    .titleBar {
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        width: 100%;
+                        word-wrap: break-word;
+                        font-size: 18px;
+                    }
+
+                    .countryBar {
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+
+                        .country {
+                            width: auto;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            p {
+                                text-align: right;
+                                margin-right: 10px;
+                            }
+                        }
+
+
+
+                        .theTime {
+                            font-weight: regular;
+                        }
+
+                    }
+
+                    .introduceBar {
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        word-wrap: break-word;
+
+                    }
+
+                    .imageBar {
+                        margin-top: 30px;
+                        align-items: center;
+                        display: flex;
+                        width: 100%;
+                        height: 500px;
+                        background-color: #000000;
+                        border-radius: 10px;
+
+                        img {
+                            width: 100%;
+                            // object-fit: cover;
+                        }
+                    }
+
+                    .ownerTime {
+                        margin-top: 30px;
+                        margin-bottom: 50px;
+                        display: flex;
+                        flex-direction: column;
+
+
+
+                        p {
+
+                            margin-top: 10px;
+                        }
+
+
+                    }
+                }
+
+                .right {
+                    margin-top: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: center;
+                    align-items: center;
+
+                    .horizontalLine {
+                        width: 550px;
+                        height: 1px;
+                        margin: 50px;
+                        background-color: var(--color-line);
+                    }
+
+
+                    .priceBar {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: baseline;
+                        width: 100%;
+
+                        .priceNumber {
+                            color: var(--color-white);
+                            font-size: 25px;
+                            font-weight: regular;
+                            margin-left: 10px;
+                            margin-right: 10px;
+                        }
+
+                        // p {
+                        // text-align: right;
+                        // }
+
+                    }
+
+                    .filePassword {
+                        width: 550px;
+
+                        .copyItem {
+                            margin-top: 10px;
+
+                            .copyContent {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 8px 10px;
+                                background: var(--color-input-background);
+                                border-radius: 4px;
+                                cursor: pointer;
+                                transition: background 0.3s;
+
+                                // &:hover {
+                                //     background: #e8e8e8;
+                                // }
+
+                                span {
+                                    margin-right: 10px;
+                                    white-space: nowrap; // 防止文本换行
+                                    overflow: hidden; // 隐藏溢出部分
+                                    text-overflow: ellipsis; // 显示省略号
+                                    max-width: 90%; 
+                                }
+
+                                .anticon {
+                                    flex-shrink: 0; // 防止图标被压缩
+                                }
+                            }
+                        }
+                    }
+
+                    .tooltip {
+                        position: fixed;
+                        background: var(--color-colorBar);
+                        color: var(--color-tips);
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        pointer-events: none;
+                        z-index: 1000;
+                        animation: fadeIn 0.2s ease-in-out;
+                    }
+
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(5px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    .buttonBar {
+                        margin-bottom: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: center;
+                        align-items: center;
+                        width: 100%;
+
+                        .buttonOne {
+                            margin-top: 30px;
+                            width: 50%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                        }
+
+                        .buttonTwo {
+                            margin-top: 50px;
+                            width: 50%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                        }
+                    }
+
+                }
+
+            }
+
+            .horizontalLine {
+                width: 1px;
+                height: 1000px;
+                margin: 50px;
+                background-color: var(--color-line);
+            }
+
+
+
+        }
+
+        .third {
+            margin-top: 20px;
+
+            width: 100%;
+            height: 200px;
+            background-color: var(--color-colorBar);
+        }
+    }
+}

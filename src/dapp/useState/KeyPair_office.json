@@ -1,0 +1,9 @@
+{
+    "name": "Truth Market KeyPair",
+    "description":"Truth Market是一个致力于犯罪证据公示的web3平台",
+    "website":"https://truthmarket.eth.limo/",
+    "KeyPair":{
+        "publicKey_office": "0x3059301306072a8648ce3d020106082a8648ce3d0301070342000411f3c5238ed10f09b1ea2c24268ec9461fd72b8f042b57f5f498d27c4c66ca9b15f40b44f42c325d4894e6372895083902db7aa5faf416403d24517fb5cce2e3",
+        "office_index": 0
+    }
+}

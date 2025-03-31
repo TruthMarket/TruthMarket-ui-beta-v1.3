@@ -1,0 +1,101 @@
+@import '../../root.css';
+
+.team {
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center; 
+    background: radial-gradient(circle at 10% 20%, rgba(13, 18, 82, 0.3), transparent 20%),
+                radial-gradient(circle at 100% 70%, rgba(81, 10, 161, 0.3), transparent 20%),
+                radial-gradient(circle at 0% 95%, rgba(59, 60, 94, 0.3), transparent 20%),
+                var(--color-background);
+
+    .container{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+
+        .text {
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: center; // 
+            justify-content: center;
+            margin-bottom: 50px;
+
+            span{
+                display: flex;
+                flex-direction: row;
+                justify-content: center; 
+                margin-bottom: 25px;
+
+                .title {
+                    font-family: var(--font-heading);
+                    font-size: 20px; 
+                    font-weight: var(--font-bold);
+                    color: var(--color-white);
+                }
+            }
+
+            .introduce { 
+                width: 90%;
+                font-family: var(--font-body);
+                font-size: 15px; 
+                font-weight: var(--font-regular);
+                margin-top: 25px; 
+                color: var(--color-gray1);
+            }
+        }
+
+        .member {
+            width: 100%; 
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap; 
+            align-items: center;
+            justify-content: center; 
+            gap: 50px; 
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container{
+            
+            .member {
+                flex-direction: row;
+                gap: 80px; 
+            }
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .container{
+            width: 1400px;
+
+            .text {
+                margin-top: 100px;
+
+                span{
+                    .title {
+                        font-size: 33px;
+                    }
+                }
+
+                .introduce { 
+                    width: 1100px;
+                    font-size: 20px; 
+                }
+            }
+
+            .member {
+                max-width: 1400px; 
+                align-items: flex-start; 
+                gap: 100px; 
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.countrySelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .country {
+        width: 200px;
+        height: 30px;
+
+        
+    }
+
+    .state {
+        width: 180px;
+        height: 30px;
+        margin-left: 20px;
+    }
+}

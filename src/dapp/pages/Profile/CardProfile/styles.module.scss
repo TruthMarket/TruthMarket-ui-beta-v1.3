@@ -1,0 +1,217 @@
+@import '../../../../root.css';
+
+.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    width: 90%;
+    height: 200px;
+    // 投影
+    box-shadow: 0 0 20px var(--color-background2);
+    background-color: var(--color-colorBar);
+
+    &:hover {
+        outline: 1px solid var(--color-activeBorder);
+    }
+
+    .horizontalLine {
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-line);
+        // margin: 0 20px; /* 根据需要调整间距 */
+    }
+
+    .image {
+        width: 350px;
+        height: 180px;
+        background-color: var(--color-black);
+        align-items: center;
+        display: flex;
+        border-radius: 10px;
+        margin: 10px;
+        justify-content: center;
+        overflow: hidden;  // 防止图片溢出
+
+        img {
+            // width: 100%;
+            height: 180px;
+            object-fit: contain;  // 保持长宽比并适应容器
+            // 可选：添加过渡效果
+            transition: transform 0.3s ease;
+            
+
+        }
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 2;
+        
+
+        .infoOne {
+            width: 90%;
+            height: 100%;
+            margin-left: 10px;
+            // margin-right: 10px;
+            // margin-top: 10px;
+            // margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: start;
+            
+            
+
+            .title {
+                margin-top: 10px;
+                margin-left: 10px;
+                font-size: 18px;
+                color: var(--color-gray1);
+                font-weight: regular;
+            }
+
+            .introduce {
+                font-size: 15px;
+                color: var(--color-gray2);
+                font-weight: lighter;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+
+            .other {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                .country {
+                    display: flex;
+                    flex-direction: row;
+    
+                    p {
+                        margin-right: 10px;
+                    }
+                }
+
+                .status {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                // 根据状态不同显示不同颜色
+                .OnSale {
+                    color: var(--color-OnSale);
+                }
+
+                .Storing {
+                    color: var(--color-Storing);
+                }
+
+                .Refunding {
+                    color: var(--color-Refunding);
+                }
+
+                .Delivering {
+                    color: var(--color-Delivering);
+                }
+
+                .Completed {
+                    color: var(--color-Completed);
+                }
+
+                .Published {
+                    color: var(--color-Published);
+                }
+    
+                .time {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+            }
+
+            
+        }
+
+        .infoTwo {
+            width: 30%;
+            height: 100%;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items:center;
+            font-size: 16px;
+
+            .withdrawType {
+                color: var(--color-gray1);
+                font-size: 15px;
+                font-weight: regular;
+            }
+
+            .priceToken {
+                display: flex;
+                // 元素靠两边对齐
+                justify-content: space-between;
+                align-items: center;
+
+
+                .price {
+                    font-size: 18px;
+
+                }
+
+                .tokenSymbol {
+                    margin-left: 5px;
+                    font-size: 12px;
+                    color: var(--color-gray2);
+                }
+
+            }
+
+            .claimButton {
+                padding: 8px 15px;
+                color: var(--color-gray2);
+                background-color: var(--color-activeBorder);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--color-active);
+                    color: var(--color-white);
+                }
+
+                &:disabled {
+                    background-color: var(--color-disabled);
+                    color: var(--color-gray2);
+                    cursor: default;
+                }
+            }
+        }
+
+        .infoThree {
+            width: 100px;
+            height: auto;
+            display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+        }
+    }
+}

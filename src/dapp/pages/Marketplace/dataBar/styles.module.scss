@@ -1,0 +1,44 @@
+@import "../../../../root.css";
+
+.dataBar {
+    width: 100%; 
+    height: 50px;
+    display: flex; 
+    flex-direction: row; 
+    background-color: var(--color-colorBar);
+    justify-content: space-around; 
+    align-items: center;
+    color: var(--color-white);
+
+    .data {
+        display: flex; 
+        flex-direction: row; 
+        // justify-content: center;
+        align-items: last baseline;
+
+
+        .labelName {
+            color: var(--color-gray1);
+            font-size: 15px; 
+            font-weight: regular;
+
+        }
+
+        .count {
+            margin-left: 10px;
+            margin-right: 5px;
+            font-size: 30px; 
+            font-weight: regular; 
+            font-family: 'Trebuchet MS',  sans-serif;
+
+        }
+
+        .dollars {
+            color: var(--color-gray1);
+            font-size: 18px; 
+            font-weight: regular;
+
+        }
+    }
+
+}

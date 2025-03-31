@@ -1,0 +1,251 @@
+@import '../../root.css';
+
+.example {
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center; 
+    background: radial-gradient(circle at 10% 20%, rgba(13, 18, 82, 0.3), transparent 20%),
+                radial-gradient(circle at 100% 70%, rgba(81, 10, 161, 0.3), transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(40, 40, 187, 0.3), transparent 20%),
+                radial-gradient(circle at 0% 95%, rgba(59, 60, 94, 0.3), transparent 20%),
+                var(--color-background);
+
+    .container{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+
+        .title {
+            width: 90%;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            gap: 20px; 
+                
+            .horizontalLine{
+                flex-grow: 1; 
+                height: 1px;
+                background-color: var(--color-active);
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: regular;
+                color: var(--color-white);
+                border: 2px solid var(--color-active);
+                border-radius: 10px;
+                padding: 8px 10px; 
+
+            }
+        }
+
+        .zero {
+            width: 80%;
+            margin-bottom: 30px;
+            color: var(--color-gray1);
+        }
+
+        .first {
+            width: 90%;
+            display: flex ;
+            flex-direction: column;
+
+            .videos {
+                width: 100%;
+                display: flex ;
+                flex-direction: column;
+                align-items: flex-start; 
+                justify-content:left; 
+
+                video {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 16 / 9;
+                    margin-top: 30px; 
+                    margin-bottom: 50px;
+                    background-color: black;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: lighter;
+                    color: var(--color-gray1);
+                    margin-left: 0;
+                }
+
+            }
+
+        }
+
+        .second {
+            width: 90%; 
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap; 
+            align-items: flex-start; 
+            justify-content: center; 
+            gap: 30px; 
+
+            .news {
+                width: 100%;
+                height: auto;
+                border:  1px solid var(--color-pBorder);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-between;
+                box-shadow: 0 0 15px 0 var(--color-boxShadow);
+
+                span {
+                    padding: 10px; 
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 2 / 1;
+                        object-fit: cover; 
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container{
+            
+    
+            .title {
+    
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .zero {
+                width: 70%;
+            }
+    
+            .first {
+    
+                .videos {
+    
+                    // video {
+                    //     width: 100%;
+                    //     height: auto;
+                    //     aspect-ratio: 16 / 9;
+                    // }
+    
+                    p {
+                        font-size: 18px;
+                    }
+    
+                }
+    
+            }
+    
+            .second {
+                // width: 90%; 
+                // display: flex;
+                // flex-direction: row; 
+                // flex-wrap: wrap; 
+                // align-items: flex-start; 
+                // justify-content: center; 
+                // gap: 30px; 
+    
+                .news {
+                    width: 48%;
+                    // height: auto;
+                    // border-radius: 10px;
+                    // margin-bottom: 20px;
+                    // display: flex;
+                    // flex-direction: column; 
+                    // justify-content: space-between;
+    
+                    span {
+                        // padding: 10px; 
+    
+                        // img {
+                        //     width: 100%;
+                        //     object-fit: cover; 
+                        // }
+    
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .container{
+            width: 1300px;
+    
+            .title {
+                width: 100%;
+    
+                p {
+                    font-size: 20px;
+                }
+            }
+    
+            .first {
+                width: 1280px;
+
+                .videos {
+    
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+    
+            .second {
+                width: 100%; 
+                // display: flex;
+                // flex-direction: row; 
+                // flex-wrap: wrap; 
+                // align-items: flex-start; 
+                // justify-content: center; 
+                // gap: 30px; 
+    
+                .news {
+                    width: 48%;
+                    // height: auto;
+                    // border-radius: 10px;
+                    // margin-bottom: 20px;
+                    // display: flex;
+                    // flex-direction: column; 
+                    // justify-content: space-between;
+    
+                    span {
+                        // padding: 10px; 
+    
+                        // img {
+                        //     width: 100%;
+                        //     object-fit: cover; 
+                        // }
+    
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}

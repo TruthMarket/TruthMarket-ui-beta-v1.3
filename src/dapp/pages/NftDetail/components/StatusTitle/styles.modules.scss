@@ -1,0 +1,41 @@
+@import "../../../../../root.css";
+
+.modeBar {
+                        
+    align-items: center;
+    font-size: 18px;
+    font-weight: regular;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+// 根据状态不同显示不同颜色
+.OnSale {
+    color: var(--color-OnSale);
+    border: 2px solid var(--color-OnSale);
+}
+
+.Storing {
+    color: var(--color-Storing);
+    border: 2px solid var(--color-Storing);
+}
+
+.Refunding {
+    color: var(--color-Refunding);
+    border: 2px solid var(--color-Refunding);
+}
+
+.Delivering {
+    color: var(--color-Delivering);
+    border: 2px solid var(--color-Delivering);
+}
+
+.Completed {
+    color: var(--color-Completed);
+    border: 2px solid var(--color-Completed);
+}
+
+.Published {
+    color: var(--color-Published);
+    border: 2px solid var(--color-Published);
+}

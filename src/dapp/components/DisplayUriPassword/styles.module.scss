@@ -1,0 +1,60 @@
+@import "../../../root.css";
+
+.filePassword {
+    width: 550px;
+
+    .copyItem {
+        margin-top: 10px;
+
+        .copyContent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px;
+            background: var(--color-input-background);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            // &:hover {
+            //     background: #e8e8e8;
+            // }
+
+            span {
+                margin-right: 10px;
+                white-space: nowrap; // 防止文本换行
+                overflow: hidden; // 隐藏溢出部分
+                text-overflow: ellipsis; // 显示省略号
+                max-width: 90%; // 限制最大宽度
+            }
+
+            .anticon {
+                flex-shrink: 0; // 防止图标被压缩
+            }
+        }
+    }
+}
+
+.tooltip {
+    position: fixed;
+    background: var(--color-colorBar);
+    color: var(--color-tips);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

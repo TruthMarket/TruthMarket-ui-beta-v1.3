@@ -1,0 +1,85 @@
+@import "../../../root.css";
+
+.home {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    height: 100%;
+    background-color: var(--color-background);
+    // color: var(--color-pWhite);
+
+    .first {
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
+        height: 300px; 
+        
+        p {
+            color: var(--color-gray1);
+            font-size: 20px; 
+            font-weight: regular;
+        }
+
+    }
+
+    .second {
+        width: 100%; 
+        height: 100%;
+        // background-color: var(--color-background2);
+        background: radial-gradient(circle at 10% 20%, rgba(25, 30, 99, 0.3), transparent 20%),
+                radial-gradient(circle at 100% 70%, rgba(81, 10, 161, 0.3), transparent 20%),
+                // radial-gradient(circle at 50% 50%, rgba(40, 40, 187, 0.3), transparent 20%),
+                radial-gradient(circle at 0% 95%, rgba(59, 60, 94, 0.4), transparent 20%),
+                var(--color-background2);
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        position: relative; 
+        
+        .container {
+            width: 1500px; 
+            height: 100%;
+
+            .display {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 33.33px;
+                margin-top: 20px;
+                justify-content: flex-start;
+                
+                > div {
+                    width: 350px;
+                    margin: 0;
+                }
+            }
+
+            .message {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                color: var(--color-gray2)
+            }
+
+            .pageSelector {
+                height: 150px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        // .horizontalLine {
+        //     width: 1400px;
+        //     height: 1px;
+        //     background-color: rgb(66, 66, 66);
+        // }
+    }
+}

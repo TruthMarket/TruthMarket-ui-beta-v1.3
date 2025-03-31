@@ -1,0 +1,10 @@
+@import "../../root.css";
+
+.truncatedParagraph {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 20px;
+    color: var(--color-gray2);
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
