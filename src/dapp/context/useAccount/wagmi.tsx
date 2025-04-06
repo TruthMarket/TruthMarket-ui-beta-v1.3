@@ -61,7 +61,7 @@ export const config = createConfig ({
     transports: {
         // [mainnet.id]: http(),
         [sepolia.id]: http(
-                'https://sepolia.infura.io/v3/0830005962704cd7841ca5ee1a424d94' // 如果你有 Infura API key
+            import.meta.env.VITE_INFURA_API_URL // 如果你有 Infura API key
         ),
     },
 })

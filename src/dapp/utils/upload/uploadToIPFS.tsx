@@ -15,7 +15,7 @@ import { FleekSdk, ApplicationAccessTokenService } from '@fleek-platform/sdk';
 // ------
 const applicationService = new ApplicationAccessTokenService({
     // clientId: config_env.fleekClientId,
-    clientId: 'client_IP-HjNmf_tkqVw2TcvyS',
+    clientId: import.meta.env.VITE_IPFS_FLEEK_clientId,
     // authAppsServiceUrl:'http://localhost:5173/',
 });
 
