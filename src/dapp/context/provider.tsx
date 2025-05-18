@@ -43,21 +43,19 @@ import { useProviderFundManager } from "./providerFundManager";
 import { useProviderExchange } from "./providerExchange";
 import { useProviderTruthBox } from "./providerTruthBox";
 
-// 合约函数的参数接口
 export interface ContractFunctionParams {
-    functionName: string; // 合约函数名
-    methodType: string; // 方法类型（读或写）
-    args?: any; // 可选函数参数
-    values?: bigint; // 可选函数值(要发送的以太币)
+    functionName: string; 
+    methodType: string; 
+    args?: any; 
+    values?: bigint; 
 }
 
-// ContractProvider组件，用于与合约交互
+
 export function ContractProvider({ children }: { children: ReactNode }) {
     const publicClient = usePublicClient(); // 公共客户端hook
     const { data: walletClient } = useWalletClient(); // 钱包客户端hook
-    const { address: currentAddress } = useAccount(); // 当前账户地址hook
-    const addRecentTransaction = useAddRecentTransaction(); // 添加最近交易的hook
-
+    const { address: currentAddress } = useAccount(); 
+    const addRecentTransaction = useAddRecentTransaction(); 
 
     const client_viem = createPublicClient({
         batch: {
@@ -66,7 +64,7 @@ export function ContractProvider({ children }: { children: ReactNode }) {
         chain: sepolia,
         transport: http(
             // 添加多个备用 RPC
-            'https://sepolia.infura.io/v3/0830005962704cd7841ca5ee1a424d94' // 如果你有 Infura API key
+            import.meta.env.VITE_INFURA_API_URL
             ,
             {
                 retryCount: 3,
@@ -77,7 +75,6 @@ export function ContractProvider({ children }: { children: ReactNode }) {
 
     const contract_viem = getContract({ address: Proxy_TruthBox, abi: ABI_TruthBox, client: client_viem })
 
-    // 与合约函数交互的函数，wagmi
     const contractFunction = async ({
         functionName,
         methodType,
@@ -127,7 +124,6 @@ export function ContractProvider({ children }: { children: ReactNode }) {
                 value: values,
             });
 
-            // 添加最近的交易
             addRecentTransaction({
                 hash: contract!.toString(),
                 description: `write ${functionName} to contract`,
@@ -142,7 +138,6 @@ export function ContractProvider({ children }: { children: ReactNode }) {
                 value: values,
             });
 
-            // 添加最近的交易
             addRecentTransaction({
                 hash: contract!.toString(),
                 description: `write ${functionName} to contract`,
@@ -157,13 +152,12 @@ export function ContractProvider({ children }: { children: ReactNode }) {
                 value: values,
             });
 
-            // 添加最近的交易
             addRecentTransaction({
                 hash: contract!.toString(),
                 description: `write ${functionName} to contract`,
             });
         }
-        return contract; // 返回合约响应
+        return contract; 
     };
 
     // const getBoxInfoList = async (tokenIdArray: number[]) => {
@@ -180,13 +174,10 @@ export function ContractProvider({ children }: { children: ReactNode }) {
     //     }
     // }
 
-    // 创建 readEncryption
     const readEncryption = useProviderEncryption(contractFunction);
 
-    // 在ContractProvider中添加:
     const readFundManager = useProviderFundManager(contractFunction);
 
-    // 在ContractProvider中添加:
     const readExchange = useProviderExchange(contractFunction);
 
     const readTruthBox = useProviderTruthBox(contractFunction);
